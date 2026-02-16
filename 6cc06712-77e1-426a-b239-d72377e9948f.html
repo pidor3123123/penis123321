@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '804274506033122');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=804274506033122&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инвестиционный проект Алишера Усманова | Новости и возможности</title>
+    <meta name="description" content="Официальный новостной портал инвестиционного проекта Алишера Усманова для жителей Узбекистана. Последние новости, возможности и регистрация.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        success: '#10b981',
+                        gold: '#f59e0b'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    spacing: {
+                        '128': '32rem',
+                        '144': '36rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        .premium-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+        }
+        .premium-card:hover {
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08), 0 10px 20px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-2px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0c4a6e 0%, #075985 50%, #0369a1 100%);
+        }
+        .language-switcher {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .language-switcher button {
+            padding: 8px 16px;
+            transition: all 0.2s;
+        }
+        .language-switcher button.active {
+            background-color: #0ea5e9;
+            color: white;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-chart-line text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">Usmanov<span class="text-primary-600">Invest</span></h1>
+                        <p class="text-xs text-gray-500" id="header-subtitle">Инвестиционный проект</p>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-primary-600 font-medium transition-colors" onclick="event.preventDefault(); scrollToSection('news')" id="nav-news">Новости</a>
+                    <a href="#" class="text-gray-700 hover:text-primary-600 font-medium transition-colors" onclick="event.preventDefault(); scrollToSection('about')" id="nav-about">О проекте</a>
+                    <a href="#" class="text-gray-700 hover:text-primary-600 font-medium transition-colors" onclick="event.preventDefault(); scrollToSection('gallery')" id="nav-gallery">Галерея</a>
+                    <a href="#" class="text-gray-700 hover:text-primary-600 font-medium transition-colors" onclick="event.preventDefault(); scrollToSection('registration')" id="nav-registration">Регистрация</a>
+                </nav>
+
+                <!-- Language Switcher -->
+                <div class="language-switcher flex">
+                    <button id="lang-ru" class="active" onclick="switchLanguage('ru')">RU</button>
+                    <button id="lang-uz" onclick="switchLanguage('uz')">UZ</button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-gray-700" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden py-4 border-t" id="mobile-menu">
+                <div class="flex flex-col space-y-4">
+                    <a href="#" class="text-gray-700 hover:text-primary-600 font-medium" onclick="event.preventDefault(); scrollToSection('news')" id="mobile-nav-news">Новости</a>
+                    <a href="#" class="text-gray-700 hover:text-primary-600 font-medium" onclick="event.preventDefault(); scrollToSection('about')" id="mobile-nav-about">О проекте</a>
+                    <a href="#" class="text-gray-700 hover:text-primary-600 font-medium" onclick="event.preventDefault(); scrollToSection('gallery')" id="mobile-nav-gallery">Галерея</a>
+                    <a href="#" class="text-gray-700 hover:text-primary-600 font-medium" onclick="event.preventDefault(); scrollToSection('registration')" id="mobile-nav-registration">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6" id="hero-title">Инвестиционный проект Алишера Усманова</h2>
+                    <p class="text-xl mb-8 text-blue-100" id="hero-subtitle">Присоединяйтесь к успешным инвестициям для жителей Узбекистана. Надежность, стабильность, премиум-условия.</p>
+                    <button class="bg-white text-primary-700 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors shadow-lg" onclick="scrollToSection('registration')" id="hero-button">Начать инвестировать</button>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white/20 shadow-2xl">
+                            <img src="https://picsum.photos/400?random=101" alt="Алишер Усманов - официальное фото" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-gold text-white py-2 px-6 rounded-lg shadow-lg">
+                            <p class="font-bold" id="hero-badge">Основатель проекта</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 py-12">
+        <!-- News Section -->
+        <section id="news" class="mb-20">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-900" id="news-title">Последние новости проекта</h2>
+                <div class="text-primary-600 font-medium" id="news-update">Обновлено сегодня</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News Item 1 -->
+                <article class="premium-card p-6">
+                    <div class="mb-4">
+                        <span class="inline-block bg-primary-100 text-primary-800 text-sm font-semibold px-3 py-1 rounded-full" id="news-tag-1">Инвестиции</span>
+                        <span class="text-gray-500 text-sm ml-3" id="news-date-1">15 марта 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4" id="news-title-1">Запуск новой инвестиционной платформы для Узбекистана</h3>
+                    <p class="text-gray-600 mb-6" id="news-text-1">Алишер Усманов анонсировал запуск специализированной инвестиционной платформы, разработанной специально для жителей Узбекистана. Платформа предлагает уникальные возможности для вложения средств в перспективные проекты.</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                            <img src="https://picsum.photos/100?random=102" alt="Фото автора новости" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900" id="news-author-1">Марк Тимуров</p>
+                            <p class="text-sm text-gray-500" id="news-role-1">Финансовый аналитик</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- News Item 2 -->
+                <article class="premium-card p-6">
+                    <div class="mb-4">
+                        <span class="inline-block bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full" id="news-tag-2">Развитие</span>
+                        <span class="text-gray-500 text-sm ml-3" id="news-date-2">10 марта 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4" id="news-title-2">Открытие нового офиса в Ташкенте</h3>
+                    <p class="text-gray-600 mb-6" id="news-text-2">В центре Ташкента состоялось торжественное открытие представительства инвестиционного проекта. Офис оснащен современными технологиями и готов принимать инвесторов для персональных консультаций.</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                            <img src="https://picsum.photos/100?random=103" alt="Фото автора новости" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900" id="news-author-2">Азиза Рахимова</p>
+                            <p class="text-sm text-gray-500" id="news-role-2">Корреспондент</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- News Item 3 -->
+                <article class="premium-card p-6">
+                    <div class="mb-4">
+                        <span class="inline-block bg-purple-100 text-purple-800 text-sm font-semibold px-3 py-1 rounded-full" id="news-tag-3">Технологии</span>
+                        <span class="text-gray-500 text-sm ml-3" id="news-date-3">5 марта 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4" id="news-title-3">Внедрение блокчейн-технологий для безопасности инвестиций</h3>
+                    <p class="text-gray-600 mb-6" id="news-text-3">Проект Алишера Усманова внедряет передовые блокчейн-решения для обеспечения максимальной прозрачности и безопасности всех инвестиционных операций. Это новый стандарт в индустрии.</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                            <img src="https://picsum.photos/100?random=104" alt="Фото автора новости" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900" id="news-author-3">Руслан Каримов</p>
+                            <p class="text-sm text-gray-500" id="news-role-3">Технический директор</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="mb-20">
+            <div class="premium-card p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center" id="about-title">О проекте Алишера Усманова</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <p class="text-gray-600 mb-6 text-lg" id="about-text-1">Инвестиционный проект создан специально для жителей Узбекистана, чтобы предоставить доступ к премиальным инвестиционным возможностям под руководством одного из самых успешных предпринимателей СНГ.</p>
+                        <p class="text-gray-600 mb-6 text-lg" id="about-text-2">Алишер Усманов лично курирует отбор активов и стратегию развития проекта, обеспечивая максимальную надежность и доходность для всех участников.</p>
+                        <div class="flex items-center space-x-6 mt-8">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary-700">15+</div>
+                                <div class="text-gray-600" id="about-stat-1">лет опыта</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary-700">98%</div>
+                                <div class="text-gray-600" id="about-stat-2">успешных сделок</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary-700">24/7</div>
+                                <div class="text-gray-600" id="about-stat-3">поддержка</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://picsum.photos/300/200?random=105" alt="Офис проекта в Москве" class="rounded-lg w-full h-48 object-cover" loading="lazy">
+                        <img src="https://picsum.photos/300/200?random=106" alt="Совещание команды проекта" class="rounded-lg w-full h-48 object-cover" loading="lazy">
+                        <img src="https://picsum.photos/300/200?random=107" alt="Награды и достижения" class="rounded-lg w-full h-48 object-cover" loading="lazy">
+                        <img src="https://picsum.photos/300/200?random=108" alt="Технологии проекта" class="rounded-lg w-full h-48 object-cover" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="mb-20">
+            <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center" id="gallery-title">Жизнь проекта: успех и премиум-условия</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="rounded-lg overflow-hidden h-64">
+                    <img src="https://picsum.photos/400/300?random=109" alt="Роскошный офис проекта с современным дизайном" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+                <div class="rounded-lg overflow-hidden h-64">
+                    <img src="https://picsum.photos/400/300?random=110" alt="Бизнес-встреча в премиум-переговорной" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+                <div class="rounded-lg overflow-hidden h-64">
+                    <img src="https://picsum.photos/400/300?random=111" alt="Премиальные автомобили партнеров проекта" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+                <div class="rounded-lg overflow-hidden h-64">
+                    <img src="https://picsum.photos/400/300?random=112" alt="Церемония награждения успешных инвесторов" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <p class="text-gray-600 max-w-2xl mx-auto" id="gallery-text">Проект Алишера Усманова — это не просто инвестиции, это доступ к экосистеме успеха, современным технологиям и премиальному образу жизни.</p>
+            </div>
+        </section>
+
+        <!-- Registration Section -->
+        <section id="registration" class="mb-20">
+            <div class="premium-card p-8 md:p-12 max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2 text-center" id="registration-title">Регистрация в инвестиционном проекте</h2>
+                <p class="text-gray-600 text-center mb-10" id="registration-subtitle">Заполните форму, и менеджер проекта свяжется с вами в выбранное время</p>
+
+                <form id="registrationForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="block text-gray-700 font-medium mb-2" id="label-firstname">Имя</label>
+                            <input type="text" id="firstName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-gray-700 font-medium mb-2" id="label-lastname">Фамилия</label>
+                            <input type="text" id="lastName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2" id="label-email">Email</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2" id="label-phone">Номер телефона</label>
+                            <input type="tel" id="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all" placeholder="+998 90 123 45 67">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2" id="label-calltime">Выберите время звонка</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                                <input type="radio" name="callTime" value="now" class="mr-3" required>
+                                <span id="calltime-now">Сейчас</span>
+                            </label>
+                            <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                                <input type="radio" name="callTime" value="5min" class="mr-3">
+                                <span id="calltime-5min">Через 5 минут</span>
+                            </label>
+                            <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                                <input type="radio" name="callTime" value="10min" class="mr-3">
+                                <span id="calltime-10min">Через 10 минут</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-primary-600 text-white font-semibold py-4 px-6 rounded-lg hover:bg-primary-700 transition-colors shadow-md" id="submit-button">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            <span>Отправить заявку</span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Success message and personal cabinet button (hidden by default) -->
+                <div id="successSection" class="hidden mt-8 text-center">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-check text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2" id="success-title">Заявка отправлена!</h3>
+                        <p class="text-gray-600" id="success-text">Спасибо, что доверяете Алишеру Усманову. В ближайшее время с вами свяжется его менеджер.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Usmanov Photos -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center" id="usmanov-title">Алишер Усманов: официальные фотографии</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="rounded-xl overflow-hidden mb-4 shadow-lg">
+                        <img src="https://picsum.photos/400/500?random=113" alt="Алишер Усманов на бизнес-форуме" class="w-full h-64 object-cover" loading="lazy">
+                    </div>
+                    <p class="text-gray-700 font-medium" id="usmanov-desc-1">На международном бизнес-форуме</p>
+                </div>
+                <div class="text-center">
+                    <div class="rounded-xl overflow-hidden mb-4 shadow-lg">
+                        <img src="https://picsum.photos/400/500?random=114" alt="Алишер Усманов во время интервью" class="w-full h-64 object-cover" loading="lazy">
+                    </div>
+                    <p class="text-gray-700 font-medium" id="usmanov-desc-2">Интервью о инвестиционных возможностях</p>
+                </div>
+                <div class="text-center">
+                    <div class="rounded-xl overflow-hidden mb-4 shadow-lg">
+                        <img src="https://picsum.photos/400/500?random=115" alt="Алишер Усманов с партнерами" class="w-full h-64 object-cover" loading="lazy">
+                    </div>
+                    <p class="text-gray-700 font-medium" id="usmanov-desc-3">Встреча с деловыми партнерами</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-white pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-chart-line text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Usmanov<span class="text-primary-400">Invest</span></h3>
+                    </div>
+                    <p class="text-gray-400" id="footer-description">Инвестиционный проект Алишера Усманова для жителей Узбекистана. Надежность, стабильность, премиум-условия.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6" id="footer-links-title">Быстрые ссылки</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="event.preventDefault(); scrollToSection('news')" id="footer-link-news">Новости</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="event.preventDefault(); scrollToSection('about')" id="footer-link-about">О проекте</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="event.preventDefault(); scrollToSection('gallery')" id="footer-link-gallery">Галерея</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="event.preventDefault(); scrollToSection('registration')" id="footer-link-registration">Регистрация</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6" id="footer-contact-title">Контакты</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-primary-400"></i>
+                            <span id="footer-phone">+998 78 123 45 67</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary-400"></i>
+                            <span id="footer-email">info@usmanovinvest.uz</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-primary-400"></i>
+                            <span id="footer-address">Ташкент, ул. Амира Темура, 108</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6" id="footer-social-title">Социальные сети</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-secondary-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-secondary-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-secondary-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-secondary-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-6" id="footer-disclaimer">Инвестиции связаны с рисками. Перед принятием решения ознакомьтесь с документацией.</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p id="footer-copyright">© 2024 Инвестиционный проект Алишера Усманова. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl p-8 max-w-md mx-4 premium-card">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-check text-green-600 text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4" id="modal-title">Спасибо за регистрацию!</h3>
+                <p class="text-gray-600 mb-8" id="modal-text">Спасибо, что доверяете Алишеру Усманову. В ближайшее время с вами свяжется его менеджер.</p>
+                <button id="closeModal" class="bg-primary-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-primary-700 transition-colors w-full">
+                    <span id="modal-button">Понятно</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Define translations
+        const translations = {
+            ru: {
+                // Header
+                "header-subtitle": "Инвестиционный проект",
+                "nav-news": "Новости",
+                "nav-about": "О проекте",
+                "nav-gallery": "Галерея",
+                "nav-registration": "Регистрация",
+                "mobile-nav-news": "Новости",
+                "mobile-nav-about": "О проекте",
+                "mobile-nav-gallery": "Галерея",
+                "mobile-nav-registration": "Регистрация",
+                
+                // Hero
+                "hero-title": "Инвестиционный проект Алишера Усманова",
+                "hero-subtitle": "Присоединяйтесь к успешным инвестициям для жителей Узбекистана. Надежность, стабильность, премиум-условия.",
+                "hero-button": "Начать инвестировать",
+                "hero-badge": "Основатель проекта",
+                
+                // News
+                "news-title": "Последние новости проекта",
+                "news-update": "Обновлено сегодня",
+                "news-tag-1": "Инвестиции",
+                "news-date-1": "15 марта 2024",
+                "news-title-1": "Запуск новой инвестиционной платформы для Узбекистана",
+                "news-text-1": "Алишер Усманов анонсировал запуск специализированной инвестиционной платформы, разработанной специально для жителей Узбекистана. Платформа предлагает уникальные возможности для вложения средств в перспективные проекты.",
+                "news-author-1": "Марк Тимуров",
+                "news-role-1": "Финансовый аналитик",
+                "news-tag-2": "Развитие",
+                "news-date-2": "10 марта 2024",
+                "news-title-2": "Открытие нового офиса в Ташкенте",
+                "news-text-2": "В центре Ташкента состоялось торжественное открытие представительства инвестиционного проекта. Офис оснащен современными технологиями и готов принимать инвесторов для персональных консультаций.",
+                "news-author-2": "Азиза Рахимова",
+                "news-role-2": "Корреспондент",
+                "news-tag-3": "Технологии",
+                "news-date-3": "5 марта 2024",
+                "news-title-3": "Внедрение блокчейн-технологий для безопасности инвестиций",
+                "news-text-3": "Проект Алишера Усманова внедряет передовые блокчейн-решения для обеспечения максимальной прозрачности и безопасности всех инвестиционных операций. Это новый стандарт в индустрии.",
+                "news-author-3": "Руслан Каримов",
+                "news-role-3": "Технический директор",
+                
+                // About
+                "about-title": "О проекте Алишера Усманова",
+                "about-text-1": "Инвестиционный проект создан специально для жителей Узбекистана, чтобы предоставить доступ к премиальным инвестиционным возможностям под руководством одного из самых успешных предпринимателей СНГ.",
+                "about-text-2": "Алишер Усманов лично курирует отбор активов и стратегию развития проекта, обеспечивая максимальную надежность и доходность для всех участников.",
+                "about-stat-1": "лет опыта",
+                "about-stat-2": "успешных сделок",
+                "about-stat-3": "поддержка",
+                
+                // Gallery
+                "gallery-title": "Жизнь проекта: успех и премиум-условия",
+                "gallery-text": "Проект Алишера Усманова — это не просто инвестиции, это доступ к экосистеме успеха, современным технологиям и премиальному образу жизни.",
+                
+                // Registration
+                "registration-title": "Регистрация в инвестиционном проекте",
+                "registration-subtitle": "Заполните форму, и менеджер проекта свяжется с вами в выбранное время",
+                "label-firstname": "Имя",
+                "label-lastname": "Фамилия",
+                "label-email": "Email",
+                "label-phone": "Номер телефона",
+                "label-calltime": "Выберите время звонка",
+                "calltime-now": "Сейчас",
+                "calltime-5min": "Через 5 минут",
+                "calltime-10min": "Через 10 минут",
+                "submit-button": "Отправить заявку",
+                "success-title": "Заявка отправлена!",
+                "success-text": "Спасибо, что доверяете Алишеру Усманову. В ближайшее время с вами свяжется его менеджер.",
+                
+                // Usmanov photos
+                "usmanov-title": "Алишер Усманов: официальные фотографии",
+                "usmanov-desc-1": "На международном бизнес-форуме",
+                "usmanov-desc-2": "Интервью о инвестиционных возможностях",
+                "usmanov-desc-3": "Встреча с деловыми партнерами",
+                
+                // Footer
+                "footer-description": "Инвестиционный проект Алишера Усманова для жителей Узбекистана. Надежность, стабильность, премиум-условия.",
+                "footer-links-title": "Быстрые ссылки",
+                "footer-link-news": "Новости",
+                "footer-link-about": "О проекте",
+                "footer-link-gallery": "Галерея",
+                "footer-link-registration": "Регистрация",
+                "footer-contact-title": "Контакты",
+                "footer-phone": "+998 78 123 45 67",
+                "footer-email": "info@usmanovinvest.uz",
+                "footer-address": "Ташкент, ул. Амира Темура, 108",
+                "footer-social-title": "Социальные сети",
+                "footer-disclaimer": "Инвестиции связаны с рисками. Перед принятием решения ознакомьтесь с документацией.",
+                "footer-copyright": "© 2024 Инвестиционный проект Алишера Усманова. Все права защищены.",
+                
+                // Modal
+                "modal-title": "Спасибо за регистрацию!",
+                "modal-text": "Спасибо, что доверяете Алишеру Усманову. В ближайшее время с вами свяжется его менеджер.",
+                "modal-button": "Понятно"
+            },
+            uz: {
+                // Header
+                "header-subtitle": "Investitsiya loyihasi",
+                "nav-news": "Yangiliklar",
+                "nav-about": "Loyiha haqida",
+                "nav-gallery": "Galereya",
+                "nav-registration": "Ro'yxatdan o'tish",
+                "mobile-nav-news": "Yangiliklar",
+                "mobile-nav-about": "Loyiha haqida",
+                "mobile-nav-gallery": "Galereya",
+                "mobile-nav-registration": "Ro'yxatdan o'tish",
+                
+                // Hero
+                "hero-title": "Alisher Usmonovning investitsiya loyihasi",
+                "hero-subtitle": "O'zbekiston aholisi uchun muvaffaqiyatli investitsiyalarga qo'shiling. Ishonchlilik, barqarorlik, premium shartlar.",
+                "hero-button": "Investitsiya qilishni boshlash",
+                "hero-badge": "Loyiha asoschisi",
+                
+                // News
+                "news-title": "Loyihaning so'nggi yangiliklari",
+                "news-update": "Bugun yangilandi",
+                "news-tag-1": "Investitsiyalar",
+                "news-date-1": "2024 yil 15 mart",
+                "news-title-1": "O'zbekiston uchun yangi investitsiya platformasining ishga tushirilishi",
+                "news-text-1": "Alisher Usmonov O'zbekiston aholisi uchun maxsus ishlab chiqilgan ixtisoslashtirilgan investitsiya platformasini ishga tushirishini e'lon qildi. Platforma istiqbolli loyihalarga mablag ' qo'yish uchun noyob imkoniyatlarni taklif etadi.",
+                "news-author-1": "Mark Timurov",
+                "news-role-1": "Moliyaviy tahlilchi",
+                "news-tag-2": "Rivojlanish",
+                "news-date-2": "2024 yil 10 mart",
+                "news-title-2": "Toshkentda yangi ofisning ochilishi",
+                "news-text-2": "Toshkent markazida investitsiya loyihasining vakolatxonasining tantanali ochilishi bo'lib o'tdi. Ofis zamonaviy texnologiyalar bilan jihozlangan va investorlarni shaxsiy maslahatlar uchun qabul qilishga tayyor.",
+                "news-author-2": "Aziza Rahimova",
+                "news-role-2": "Muxbir",
+                "news-tag-3": "Texnologiyalar",
+                "news-date-3": "2024 yil 5 mart",
+                "news-title-3": "Investitsiyalarning xavfsizligi uchun blokcheyn texnologiyalarini joriy etish",
+                "news-text-3": "Alisher Usmonov loyihasi barcha investitsiya operatsiyalarining maksimal shaffofligi va xavfsizligini ta'minlash uchun ilg'or blokcheyn echimlarini joriy etmoqda. Bu sanoatda yangi standart.",
+                "news-author-3": "Ruslan Karimov",
+                "news-role-3": "Texnik direktor",
+                
+                // About
+                "about-title": "Alisher Usmonov loyihasi haqida",
+                "about-text-1": "Investitsiya loyihasi O'zbekiston aholisi uchun MDHning eng muvaffaqiyatli tadbirkorlaridan birining rahbarligida premium investitsiya imkoniyatlariga kirishni ta'minlash uchun maxsus yaratilgan.",
+                "about-text-2": "Alisher Usmonov barcha ishtirokchilar uchun maksimal ishonchlilik va daromadlilikni ta'minlab, aktivlarni tanlash va loyihaning rivojlanish strategiyasini shaxsan nazorat qiladi.",
+                "about-stat-1": "yillik tajriba",
+                "about-stat-2": "muvaffaqiyatli bitimlar",
+                "about-stat-3": "qo'llab-quvvatlash",
+                
+                // Gallery
+                "gallery-title": "Loyiha hayoti: muvaffaqiyat va premium shartlar",
+                "gallery-text": "Alisher Usmonov loyihasi - bu nafaqat investitsiyalar, balki muvaffaqiyat ekotizimiga, zamonaviy texnologiyalarga va premium turmush tarziga kirish.",
+                
+                // Registration
+                "registration-title": "Investitsiya loyihasiga ro'yxatdan o'tish",
+                "registration-subtitle": "Formani to'ldiring va loyiha menejeri siz bilan tanlangan vaqtda bog'lanadi",
+                "label-firstname": "Ism",
+                "label-lastname": "Familiya",
+                "label-email": "Email",
+                "label-phone": "Telefon raqami",
+                "label-calltime": "Qo'ng'iroq vaqtini tanlang",
+                "calltime-now": "Hozir",
+                "calltime-5min": "5 daqiqadan keyin",
+                "calltime-10min": "10 daqiqadan keyin",
+                "submit-button": "Ariza yuborish",
+                "success-title": "Ariza yuborildi!",
+                "success-text": "Alisher Usmonovga ishonchingiz uchun rahmat. Yaqin vaqt ichida siz bilan uning menejeri bog'lanadi.",
+                
+                // Usmanov photos
+                "usmanov-title": "Alisher Usmonov: rasmiy fotosuratlar",
+                "usmanov-desc-1": "Xalqaro biznes-forumda",
+                "usmanov-desc-2": "Investitsiya imkoniyatlari haqida intervyu",
+                "usmanov-desc-3": "Biznes hamkorlari bilan uchrashuv",
+                
+                // Footer
+                "footer-description": "O'zbekiston aholisi uchun Alisher Usmonovning investitsiya loyihasi. Ishonchlilik, barqarorlik, premium shartlar.",
+                "footer-links-title": "Tezkor havolalar",
+                "footer-link-news": "Yangiliklar",
+                "footer-link-about": "Loyiha haqida",
+                "footer-link-gallery": "Galereya",
+                "footer-link-registration": "Ro'yxatdan o'tish",
+                "footer-contact-title": "Kontaktlar",
+                "footer-phone": "+998 78 123 45 67",
+                "footer-email": "info@usmanovinvest.uz",
+                "footer-address": "Toshkent, Amir Temur ko'chasi, 108",
+                "footer-social-title": "Ijtimoiy tarmoqlar",
+                "footer-disclaimer": "Investitsiyalar xavfli. Qaror qabul qilishdan oldin hujjatlarni o'rganing.",
+                "footer-copyright": "© 2024 Alisher Usmonovning investitsiya loyihasi. Barcha huquqlar himoyalangan.",
+                
+                // Modal
+                "modal-title": "Ro'yxatdan o'tganingiz uchun rahmat!",
+                "modal-text": "Alisher Usmonovga ishonchingiz uchun rahmat. Yaqin vaqt ichida siz bilan uning menejeri bog'lanadi.",
+                "modal-button": "Tushunarli"
+            }
+        };
+
+        // Current language
+        let currentLang = 'ru';
+
+        // Function to switch language
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Update language switcher buttons
+            document.getElementById('lang-ru').classList.toggle('active', lang === 'ru');
+            document.getElementById('lang-uz').classList.toggle('active', lang === 'uz');
+            
+            // Update all translatable elements
+            Object.keys(translations[lang]).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) {
+                    if (element.tagName === 'INPUT' && element.type === 'submit') {
+                        element.value = translations[lang][key];
+                    } else if (element.tagName === 'BUTTON' && !element.querySelector('span')) {
+                        element.textContent = translations[lang][key];
+                    } else if (element.tagName === 'BUTTON' && element.querySelector('span')) {
+                        element.querySelector('span').textContent = translations[lang][key];
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+        }
+
+        // Function to scroll to section
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+                
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenu.classList.contains('hidden') === false) {
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+        }
+
+        // Form submission handler is now in send_lead.js
+
+        // Close modal handler
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('successModal').classList.add('hidden');
+        });
+
+        // Mobile menu handler
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('successModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial language
+            switchLanguage('ru');
+            
+            // Add smooth scrolling to all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    if (targetId) {
+                        scrollToSection(targetId);
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="js/send_lead.js"></script>
+</body>
+</html>
